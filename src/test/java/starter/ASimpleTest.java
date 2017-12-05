@@ -6,8 +6,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import starter.steps.MathWizSteps;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
 @RunWith(SerenityRunner.class)
 public class ASimpleTest {
 
