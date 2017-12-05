@@ -24,8 +24,6 @@ Open a command window and run:
 
     mvn clean verify
 
-This runs Cucumber features using Cucumber's JUnit runner. The `@RunWith(CucumberWithSerenity.class)` annotation on the `CucumberTestSuite`
-
 ## Use Gradle
 
 Open a command window and run:
