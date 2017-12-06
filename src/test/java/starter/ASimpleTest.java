@@ -1,6 +1,7 @@
 package starter;
 
 import net.serenitybdd.junit.runners.SerenityRunner;
+import net.thucydides.core.annotations.Pending;
 import net.thucydides.core.annotations.Steps;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,6 +14,7 @@ public class ASimpleTest {
     MathWizSteps michael;
 
     @Test
+    @Pending
     public void addingSums() {
         // Given
         michael.startsWith(1);
