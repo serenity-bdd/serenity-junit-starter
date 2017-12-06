@@ -14,7 +14,6 @@ public class ASimpleTest {
     MathWizSteps michael;
 
     @Test
-    @Pending
     public void addingSums() {
         // Given
         michael.startsWith(1);
