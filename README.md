@@ -1,12 +1,10 @@
-# Serenity Cucumber Starter project
+# Serenity JUnit Starter project
 
 
 This is the simplest possible build script setup for Serenity BDD using Java. 
 
-This is a very minimal sample project using Cucumber and Serenity BDD in Java. 
+This is a very minimal sample project using JUnit and Serenity BDD in Java. 
 You can use this project as a quick starting point for your own projects.
-
-There is a single feature file with one scenario. The scenario has three steps, the last of which is pending. 
 
 ## Get the code
 
