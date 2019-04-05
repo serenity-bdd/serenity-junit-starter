@@ -16,6 +16,7 @@ public class WhenAddingNumbers {
     MathWizSteps michael;
 
     @Test
+    @Pending
     public void addingSums() {
         // Given
         michael.startsWith(1);
