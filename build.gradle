@@ -36,7 +36,7 @@ dependencies {
 
     testCompile "net.serenity-bdd:serenity-core:${serenityCoreVersion}",
                 "net.serenity-bdd:serenity-junit:${serenityCoreVersion}",
-                "junit:junit:${junitVersion}"
+                "junit:junit:${junitVersion}",
                 "org.assertj:assertj-core:${assertJVersion}"
 }
 
