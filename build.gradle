@@ -11,7 +11,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath("net.serenity-bdd:serenity-gradle-plugin:2.0.52")
+        classpath("net.serenity-bdd:serenity-gradle-plugin:2.0.81")
     }
 }
 
@@ -25,7 +25,7 @@ targetCompatibility = 1.8
 
 ext {
     slf4jVersion = '1.7.7'
-    serenityCoreVersion = '2.0.55'
+    serenityCoreVersion = '2.0.81'
     junitVersion = '4.12'
     assertJVersion = '3.8.0'
     logbackVersion = '1.2.3'
