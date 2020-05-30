@@ -17,9 +17,6 @@ public class WhenAddingNumbers {
     @Steps
     MathWizSteps michael;
 
-    @Managed
-    WebDriver driver;
-
     @Test
     public void addingSums() {
         // Given
