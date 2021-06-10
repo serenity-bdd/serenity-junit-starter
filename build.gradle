@@ -33,14 +33,13 @@ ext {
 }
 
 dependencies {
-    compile "ch.qos.logback:logback-classic:${logbackVersion}"
-
-    testCompile "net.serenity-bdd:serenity-core:${serenityCoreVersion}",
+    testImplementation "net.serenity-bdd:serenity-core:${serenityCoreVersion}",
                 "net.serenity-bdd:serenity-junit:${serenityCoreVersion}",
                 "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}",
                 "junit:junit:${junitVersion}",
                 "org.assertj:assertj-core:${assertJVersion}",
-                "org.projectlombok:lombok:${lombokVersion}"
+                "org.projectlombok:lombok:${lombokVersion}",
+                "ch.qos.logback:logback-classic:${logbackVersion}"
 }
 
 test {
