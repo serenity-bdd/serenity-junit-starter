@@ -10,8 +10,8 @@
     <name>Sample Serenity BDD project using JUnit</name>
 
     <properties>
-        <serenity.version>2.3.12</serenity.version>
-        <serenity.maven.version>2.3.12</serenity.maven.version>
+        <serenity.version>2.4.34</serenity.version>
+        <serenity.maven.version>2.4.34</serenity.maven.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <encoding>UTF-8</encoding>
         <tags></tags>
@@ -41,6 +41,11 @@
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>1.0.13</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.20</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
