@@ -29,6 +29,7 @@ ext {
     junitVersion = '4.13'
     assertJVersion = '3.8.0'
     logbackVersion = '1.2.3'
+    lombokVersion = '1.18.20'
 }
 
 dependencies {
@@ -38,7 +39,8 @@ dependencies {
                 "net.serenity-bdd:serenity-junit:${serenityCoreVersion}",
                 "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}",
                 "junit:junit:${junitVersion}",
-                "org.assertj:assertj-core:${assertJVersion}"
+                "org.assertj:assertj-core:${assertJVersion}",
+                "org.projectlombok:lombok:${lombokVersion}"
 }
 
 test {
