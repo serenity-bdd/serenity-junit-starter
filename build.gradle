@@ -1,31 +1,22 @@
+plugins {
+    id "net.serenity-bdd.serenity-gradle-plugin" version "2.5.10"
+    id 'java'
+    id 'eclipse'
+    id 'idea'
+}
+
 defaultTasks 'clean','test','aggregate'
 
 repositories {
     mavenLocal()
-    jcenter()
 }
-
-buildscript {
-    repositories {
-        mavenLocal()
-        jcenter()
-    }
-    dependencies {
-        classpath("net.serenity-bdd:serenity-gradle-plugin:2.4.34")
-    }
-}
-
-apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'idea'
-apply plugin: 'net.serenity-bdd.aggregator'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 ext {
     slf4jVersion = '1.7.7'
-    serenityCoreVersion = '2.4.34'
+    serenityCoreVersion = '2.5.10'
     junitVersion = '4.13.1'
     assertJVersion = '3.8.0'
     logbackVersion = '1.2.3'
