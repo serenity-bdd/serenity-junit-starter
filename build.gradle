@@ -42,4 +42,8 @@ test {
 
 gradle.startParameter.continueOnFailure = true
 
+serenity {
+    reports = ["single-page-html"]
+}
+
 test.finalizedBy(aggregate)
