@@ -8,7 +8,7 @@ plugins {
 defaultTasks 'clean','test','aggregate'
 
 repositories {
-    mavenLocal()
+    mavenCentral()
 }
 
 sourceCompatibility = 1.8
