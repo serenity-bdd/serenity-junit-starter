@@ -78,7 +78,8 @@
                     </includes>
                     <systemPropertyVariables>
                         <webdriver.base.url>${webdriver.base.url}</webdriver.base.url>
-                        <junit.jupiter.extensions.autodetection.enabled>true</junit.jupiter.extensions.autodetection.enabled>
+                        <junit.jupiter.extensions.autodetection.enabled>true
+                        </junit.jupiter.extensions.autodetection.enabled>
                     </systemPropertyVariables>
                     <parallel>classes</parallel>
                     <threadCount>${parallel.tests}</threadCount>
@@ -107,7 +108,8 @@
                 <artifactId>serenity-maven-plugin</artifactId>
                 <version>${serenity.version}</version>
                 <configuration>
-                  <tags>${tags}</tags>
+                    <tags>${tags}</tags>
+                    <reports>single-page-html</reports>
                 </configuration>
                 <executions>
                     <execution>
@@ -118,6 +120,13 @@
                         </goals>
                     </execution>
                 </executions>
+                <dependencies>
+                    <dependency>
+                        <groupId>net.serenity-bdd</groupId>
+                        <artifactId>serenity-single-page-report</artifactId>
+                        <version>${serenity.version}</version>
+                    </dependency>
+                </dependencies>
             </plugin>
         </plugins>
     </build>

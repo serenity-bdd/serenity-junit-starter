@@ -1,3 +1,14 @@
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "net.serenity-bdd:serenity-gradle-plugin:3.1.1"
+    }
+}
+
 plugins {
     id "net.serenity-bdd.serenity-gradle-plugin" version "3.1.1"
     id 'java'
@@ -5,7 +16,7 @@ plugins {
     id 'idea'
 }
 
-defaultTasks 'clean','test','aggregate'
+defaultTasks 'clean', 'test', 'aggregate'
 
 repositories {
     mavenCentral()
@@ -25,13 +36,12 @@ ext {
 
 dependencies {
     testImplementation "net.serenity-bdd:serenity-core:${serenityCoreVersion}",
-                "net.serenity-bdd:serenity-junit5:${serenityCoreVersion}",
-                "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}",
-                "org.junit.jupiter:junit-jupiter-api:${junitVersion}",
-                "org.junit.jupiter:junit-jupiter-engine:${junitVersion}",
-                "org.assertj:assertj-core:${assertJVersion}",
-                "org.projectlombok:lombok:${lombokVersion}",
-                "ch.qos.logback:logback-classic:${logbackVersion}"
+            "net.serenity-bdd:serenity-junit5:${serenityCoreVersion}",
+            "org.junit.jupiter:junit-jupiter-api:${junitVersion}",
+            "org.junit.jupiter:junit-jupiter-engine:${junitVersion}",
+            "org.assertj:assertj-core:${assertJVersion}",
+            "org.projectlombok:lombok:${lombokVersion}",
+            "ch.qos.logback:logback-classic:${logbackVersion}"
 }
 
 test {
