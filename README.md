@@ -1,9 +1,6 @@
 # Serenity JUnit Starter project
 
-This is the simplest possible build script setup for Serenity BDD using Java and JUnit. 
-
-This is a very minimal sample project using JUnit and Serenity BDD in Java. 
-You can use this project as a quick starting point for your own projects.
+Get started quickly with Serenity BDD and JUnit 5 with this simple starter project. 
 
 ## Get the code
 
@@ -30,3 +27,6 @@ Open a command window and run:
 ## Viewing the reports
 
 Both of the commands provided above will produce a Serenity test report in the `target/site/serenity` directory. Go take a look!
+
+## Tailoring the project to your needs
+

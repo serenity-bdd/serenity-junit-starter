@@ -1,5 +1,5 @@
 plugins {
-    id "net.serenity-bdd.serenity-gradle-plugin" version "2.5.10"
+    id "net.serenity-bdd.serenity-gradle-plugin" version "3.1.1"
     id 'java'
     id 'eclipse'
     id 'idea'
@@ -16,8 +16,8 @@ targetCompatibility = 1.8
 
 ext {
     slf4jVersion = '1.7.7'
-    serenityCoreVersion = '2.5.10'
-    junitVersion = '4.13.1'
+    serenityCoreVersion = '3.1.1'
+    junitVersion = '5.8.1'
     assertJVersion = '3.8.0'
     logbackVersion = '1.2.3'
     lombokVersion = '1.18.20'
@@ -25,15 +25,17 @@ ext {
 
 dependencies {
     testImplementation "net.serenity-bdd:serenity-core:${serenityCoreVersion}",
-                "net.serenity-bdd:serenity-junit:${serenityCoreVersion}",
+                "net.serenity-bdd:serenity-junit5:${serenityCoreVersion}",
                 "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}",
-                "junit:junit:${junitVersion}",
+                "org.junit.jupiter:junit-jupiter-api:${junitVersion}",
+                "org.junit.jupiter:junit-jupiter-engine:${junitVersion}",
                 "org.assertj:assertj-core:${assertJVersion}",
                 "org.projectlombok:lombok:${lombokVersion}",
                 "ch.qos.logback:logback-classic:${logbackVersion}"
 }
 
 test {
+    useJUnitPlatform()
     testLogging.showStandardStreams = true
     systemProperties System.getProperties()
 }
