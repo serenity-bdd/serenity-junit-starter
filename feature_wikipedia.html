@@ -62,8 +62,11 @@
 <!--CHART.JS-->
 <script src="chartjs/chart.js"></script>
 <script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
-<script src="chartjs/chartjs-plugin-doughnutlabel.min.js"></script>
 <script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
 <!-- JQuery-UI -->
 <link type="text/css" href="jqueryui/1.11.2-start/jquery-ui.min.css" rel="Stylesheet" />
 <script type="text/javascript" src="jqueryui/1.11.2-start/jquery-ui.min.js"></script><!-- DataTables -->
@@ -215,7 +218,7 @@
             <a href="requirement_type_story.html"><i class="bi bi-chat-text"></i> Stories</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 29-11-2021 16:46</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 28-12-2022 08:49</span>
     <br style="clear:left"/>
 </div>
 
@@ -328,12 +331,12 @@
                                                                         <a href="starter.wikipedia.whensearchingforterms_searchbysinglekeyword.html">Search by single keyword</a>
                                                                 </td>
                                                                 <td>3</td>
-                                                                <td>16:46:50</td>
-                                                                <td>6s 998ms</td>
+                                                                <td>08:49:33</td>
+                                                                <td>10s 893ms</td>
                                                                 <td>
                                                                         <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
                                                                             style="display:none">SUCCESS</span>
-                                                                </td>
+                                                                    LINK:                                                                 </td>
                                                             </tr>
                                                         </tbody>
                                                     </table>
@@ -361,7 +364,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-12">
-                    <span class="version">Serenity BDD version 3.1.1</span>
+                    <span class="version">Serenity BDD version 3.1.15</span>
                 </div>
             </div>
         </div>
@@ -370,9 +373,6 @@
 <!-- Chart data -->
     <!-- PIE CHART -->
     <script>
-
-        // Register the plugin to all charts:
-        Chart.register(ChartDataLabels);
 
         // The results pie chart
         const outcomeChartCtx = document.getElementById('resultChart');
@@ -468,9 +468,6 @@
 
     <!-- SUMMARY BAR CHART -->
     <script>
-
-        // Register the plugin to all charts:
-        Chart.register(ChartDataLabels);
 
         // The Severity bar chart
         const severityChartCtx = document.getElementById('severityChart');
@@ -575,7 +572,7 @@
             datasets: [{
                 label: 'Number of tests per duration',
                 fill: false,
-                data: ['0','1','0','0','0','0','0','0'],
+                data: ['0','0','1','0','0','0','0','0'],
                 backgroundColor: 'rgba(83, 146, 255,0.5)',
                 borderColor: 'rgba(83, 146, 255, 1)',
             }]

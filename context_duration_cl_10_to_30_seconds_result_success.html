@@ -65,8 +65,11 @@
 <!--CHART.JS-->
 <script src="chartjs/chart.js"></script>
 <script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
-<script src="chartjs/chartjs-plugin-doughnutlabel.min.js"></script>
 <script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
 <!-- JQuery-UI -->
 <link type="text/css" href="jqueryui/1.11.2-start/jquery-ui.min.css" rel="Stylesheet" />
 <script type="text/javascript" src="jqueryui/1.11.2-start/jquery-ui.min.js"></script><!-- DataTables -->
@@ -145,8 +148,9 @@
     <div id="contenttop">
         <div class="middlebg">
         <span class="breadcrumbs"><a href="index.html">Home</a>
+                > Duration 
                 > <span
-                    class="truncate-60">Duration 1 To 10 Seconds</span>
+                    class="truncate-60">10 To 30 Seconds (Passing Tests)</span>
         </span>
         </div>
         <div class="rightbg"></div>
@@ -169,7 +173,7 @@
             <a href="requirement_type_story.html"><i class="bi bi-chat-text"></i> Stories</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 29-11-2021 16:47:03</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 28-12-2021 08:49:49</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -178,7 +182,7 @@
         <div class="middlb">
             <div class="table">
 
-                <h2>Duration 1 To 10 Seconds</h2>
+                <h2><i class='bi bi-tags'></i> Duration: 10 To 30 Seconds (Passing Tests)</h2>
                 <table class='overview'>
                     <tr>
                         <td width="375px" valign="top">
@@ -189,7 +193,7 @@
                                     across 1 scenario
 
                                      |
-                                        <a href="duration_1_to_10_seconds.csv" title="Download CSV"> <i class="bi bi-cloud-arrow-down" title="Download CSV"></i></a>
+                                        <a href="context_10_to_30_seconds_result_success.csv" title="Download CSV"> <i class="bi bi-cloud-arrow-down" title="Download CSV"></i></a>
 
                                     <p class="report-info"><i class="bi bi-info-circle"></i> Note that results include
                                         data-driven scenarios containing test ,
@@ -226,43 +230,43 @@
                                                                         <td>
                                                                             <i class="bi bi-flag-fill"></i> Tests Started
                                                                         </td>
-                                                                        <td>Nov 29, 2021 16:46:50</td>
+                                                                        <td>Dec 28, 2021 08:49:33</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-stop-circle"></i> Tests Finished
                                                                         </td>
-                                                                        <td>Nov 29, 2021 16:46:57</td>
+                                                                        <td>Dec 28, 2021 08:49:44</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-stopwatch"></i> Total Duration
                                                                         </td>
-                                                                        <td>6s</td>
+                                                                        <td>10s</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-trophy"></i> Fastest Test
                                                                         </td>
-                                                                        <td>6s</td>
+                                                                        <td>10s</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-skip-start"></i> Slowest Test
                                                                         </td>
-                                                                        <td>6s</td>
+                                                                        <td>10s</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-stopwatch"></i> Average Execution Time
                                                                         </td>
-                                                                        <td>6s</td>
+                                                                        <td>10s</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-stopwatch-fill"></i> Total Execution Time
                                                                         </td>
-                                                                        <td>6s</td>
+                                                                        <td>10s</td>
                                                                     </tr>
                                                                     </tbody>
                                                                 </table>
@@ -326,8 +330,8 @@
                                                         <a href="starter.wikipedia.whensearchingforterms_searchbysinglekeyword.html">Search by single keyword</a>
                                                     </td>
                                                     <td>3</td>
-                                                    <td>16:46:50</td>
-                                                    <td>6s 998ms</td>
+                                                    <td>08:49:33</td>
+                                                    <td>10s 893ms</td>
                                                     <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
                                                             style="display:none">SUCCESS</span></td>
                                                 </tr>
@@ -363,7 +367,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-12">
-            <span class="version">Serenity BDD version 3.1.1</span>
+            <span class="version">Serenity BDD version 3.1.15</span>
         </div>
     </div>
 </div>
@@ -372,22 +376,19 @@
     <!-- PIE CHART -->
     <script>
 
-        // Register the plugin to all charts:
-        Chart.register(ChartDataLabels);
-
         // The results pie chart
         const outcomeChartCtx = document.getElementById('resultChart');
 
         // Options define for display value on top of bars
         const outcomeDetailsReports = [
-            { title: 'Passing Scenarios', link: "result_success.html" },
-            { title: 'Pending Scenarios', link: "result_pending.html" },
-            { title: 'Ignored Scenarios', link: "result_ignored.html" },
-            { title: 'Skipped Scenarios', link: "result_skipped.html" },
-            { title: 'Aborted Scenarios',  link: "result_aborted.html"},
-            { title: 'Failed Scenarios', link: "result_failure.html"  },
-            { title: 'Broken Scenarios', link: "result_error.html"    },
-            { title: 'Compromised Scenarios',  link: "result_compromised.html" },
+            { title: 'Passing Scenarios', link: "context_duration_cl_10_to_30_seconds_result_success.html" },
+            { title: 'Pending Scenarios', link: "context_duration_cl_10_to_30_seconds_result_pending.html" },
+            { title: 'Ignored Scenarios', link: "context_duration_cl_10_to_30_seconds_result_ignored.html" },
+            { title: 'Skipped Scenarios', link: "context_duration_cl_10_to_30_seconds_result_skipped.html" },
+            { title: 'Aborted Scenarios',  link: "context_duration_cl_10_to_30_seconds_result_aborted.html"},
+            { title: 'Failed Scenarios', link: "context_duration_cl_10_to_30_seconds_result_failure.html"  },
+            { title: 'Broken Scenarios', link: "context_duration_cl_10_to_30_seconds_result_error.html"    },
+            { title: 'Compromised Scenarios',  link: "context_duration_cl_10_to_30_seconds_result_compromised.html" },
         ]
         const outcomeData = {
             labels: ['Passing', 'Pending', 'Ignored', 'Skipped', 'Aborted', 'Failed', 'Broken', 'Compromised'],
@@ -470,23 +471,20 @@
     <!-- SUMMARY BAR CHART -->
     <script>
 
-        // Register the plugin to all charts:
-        Chart.register(ChartDataLabels);
-
         // The Severity bar chart
         const severityChartCtx = document.getElementById('severityChart');
 
         // Options define for display value on top of bars
 
         const severityDetailsReports = [
-            { title: 'Passing Scenarios', link: "result_success.html" },
-            { title: 'Pending Scenarios', link: "result_pending.html" },
-            { title: 'Ignored Scenarios', link: "result_ignored.html" },
-            { title: 'Skipped Scenarios', link: "result_skipped.html" },
-            { title: 'Aborted Scenarios',  link: "result_aborted.html"},
-            { title: 'Failed Scenarios', link: "result_failure.html"  },
-            { title: 'Broken Scenarios', link: "result_error.html"    },
-            { title: 'Compromised Scenarios',  link: "result_compromised.html" },
+            { title: 'Passing Scenarios', link: "context_duration_cl_10_to_30_seconds_result_success.html" },
+            { title: 'Pending Scenarios', link: "context_duration_cl_10_to_30_seconds_result_pending.html" },
+            { title: 'Ignored Scenarios', link: "context_duration_cl_10_to_30_seconds_result_ignored.html" },
+            { title: 'Skipped Scenarios', link: "context_duration_cl_10_to_30_seconds_result_skipped.html" },
+            { title: 'Aborted Scenarios',  link: "context_duration_cl_10_to_30_seconds_result_aborted.html"},
+            { title: 'Failed Scenarios', link: "context_duration_cl_10_to_30_seconds_result_failure.html"  },
+            { title: 'Broken Scenarios', link: "context_duration_cl_10_to_30_seconds_result_error.html"    },
+            { title: 'Compromised Scenarios',  link: "context_duration_cl_10_to_30_seconds_result_compromised.html" },
         ]
         const severityData = {
             labels: ['Passing', 'Pending', 'Ignored', 'Skipped', 'Aborted', 'Failed', 'Broken', 'Compromised'],
@@ -557,14 +555,14 @@
 
         // Options define for display value on top of bars
         const durationDetailsReports = [
-                {title: "Under 1 second", link: "duration_under_1_second.html"},
-                {title: "1 to 10 seconds", link: "duration_1_to_10_seconds.html"},
-                {title: "10 to 30 seconds", link: "duration_10_to_30_seconds.html"},
-                {title: "30 to 60 seconds", link: "duration_30_to_60_seconds.html"},
-                {title: "1 to 2 minutes", link: "duration_1_to_2_minutes.html"},
-                {title: "2 to 5 minutes", link: "duration_2_to_5_minutes.html"},
-                {title: "5 to 10 minutes", link: "duration_5_to_10_minutes.html"},
-                {title: "10 minutes or over", link: "duration_10_minutes_or_over.html"},
+                {title: "Under 1 second", link: "context_duration_cl_10_to_30_seconds_duration_under_1_second.html"},
+                {title: "1 to 10 seconds", link: "context_duration_cl_10_to_30_seconds_duration_1_to_10_seconds.html"},
+                {title: "10 to 30 seconds", link: "context_duration_cl_10_to_30_seconds_duration_10_to_30_seconds.html"},
+                {title: "30 to 60 seconds", link: "context_duration_cl_10_to_30_seconds_duration_30_to_60_seconds.html"},
+                {title: "1 to 2 minutes", link: "context_duration_cl_10_to_30_seconds_duration_1_to_2_minutes.html"},
+                {title: "2 to 5 minutes", link: "context_duration_cl_10_to_30_seconds_duration_2_to_5_minutes.html"},
+                {title: "5 to 10 minutes", link: "context_duration_cl_10_to_30_seconds_duration_5_to_10_minutes.html"},
+                {title: "10 minutes or over", link: "context_duration_cl_10_to_30_seconds_duration_10_minutes_or_over.html"},
         ]
         // The Severity bar chart
         const durationChartCtx = document.getElementById('durationChart');
@@ -576,7 +574,7 @@
             datasets: [{
                 label: 'Number of tests per duration',
                 fill: false,
-                data: ['0','1','0','0','0','0','0','0'],
+                data: ['0','0','1','0','0','0','0','0'],
                 backgroundColor: 'rgba(83, 146, 255,0.5)',
                 borderColor: 'rgba(83, 146, 255, 1)',
             }]
