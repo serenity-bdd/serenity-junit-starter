@@ -15,7 +15,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <encoding>UTF-8</encoding>
         <tags></tags>
-        <parallel.tests>4</parallel.tests>
         <webdriver.base.url></webdriver.base.url>
     </properties>
     <dependencies>
@@ -78,12 +77,8 @@
                     </includes>
                     <systemPropertyVariables>
                         <webdriver.base.url>${webdriver.base.url}</webdriver.base.url>
-                        <junit.jupiter.extensions.autodetection.enabled>true
-                        </junit.jupiter.extensions.autodetection.enabled>
+                        <junit.jupiter.extensions.autodetection.enabled>true</junit.jupiter.extensions.autodetection.enabled>
                     </systemPropertyVariables>
-                    <parallel>classes</parallel>
-                    <threadCount>${parallel.tests}</threadCount>
-                    <forkCount>${parallel.tests}</forkCount>
                 </configuration>
                 <executions>
                     <execution>
