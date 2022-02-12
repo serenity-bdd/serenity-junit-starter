@@ -30,7 +30,7 @@ ext {
     serenityCoreVersion = '3.2.0'
     junitVersion = '5.8.2'
     assertJVersion = '3.8.0'
-    logbackVersion = '1.2.3'
+    logbackVersion = '1.2.10'
     lombokVersion = '1.18.20'
 }
 
