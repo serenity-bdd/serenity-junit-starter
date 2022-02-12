@@ -1,6 +1,6 @@
-Serenity report generated 14-01-2022 09:52:34
-1 test scenarios 
+Serenity report generated 12-02-2022 08:07:39
 
+Test Cases:         1 
 Passed:             1
 Failed:             0
 Failed with errors: 0
