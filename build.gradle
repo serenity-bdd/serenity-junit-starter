@@ -5,12 +5,12 @@ buildscript {
         }
     }
     dependencies {
-        classpath "net.serenity-bdd:serenity-gradle-plugin:3.2.0"
+        classpath "net.serenity-bdd:serenity-gradle-plugin:3.3.0"
     }
 }
 
 plugins {
-    id "net.serenity-bdd.serenity-gradle-plugin" version "3.2.0"
+    id "net.serenity-bdd.serenity-gradle-plugin" version "3.3.0"
     id 'java'
     id 'eclipse'
     id 'idea'
@@ -27,9 +27,9 @@ targetCompatibility = 1.8
 
 ext {
     slf4jVersion = '1.7.7'
-    serenityCoreVersion = '3.2.0'
+    serenityCoreVersion = '3.3.0'
     junitVersion = '5.8.2'
-    assertJVersion = '3.8.0'
+    assertJVersion = '3.23.1'
     logbackVersion = '1.2.10'
     lombokVersion = '1.18.20'
 }
@@ -55,11 +55,8 @@ gradle.startParameter.continueOnFailure = true
 serenity {
     reports = ["single-page-html"]
 
-    // Specify the root package of any JUnit acceptance tests
+    // // Specify the root package of any JUnit acceptance tests
     testRoot="starter"
-
-    // Specify the root directory of any Cucumber feature files
-    requirementsDir = "src/test/resources/features"
 }
 
 test.finalizedBy(aggregate)
