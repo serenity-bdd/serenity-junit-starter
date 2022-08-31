@@ -9,8 +9,12 @@ import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import Tasks.DoLogin;
 import Tasks.NavigateTo;
+import starter.questions.CheckSchedule;
+
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
+import static org.hamcrest.CoreMatchers.equalTo;
 
 public class LoginStepDefinitions {
 
@@ -40,6 +44,8 @@ public class LoginStepDefinitions {
 
     @Then("he should have schedule his class successful")
     public void he_should_have_schedule_his_class_successful(){
-
+        theActorCalled(name).should(
+                seeThat(CheckSchedule.booked(), equalTo(true))
+        );
     }
 }

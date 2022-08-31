@@ -29,6 +29,7 @@ public class SwitchPage implements Task {
         String currentHandle = BrowseTheWeb.as(actor).getDriver().getWindowHandle();
         actor.attemptsTo(
                 Switch.toWindow(getNewWindowHandle(actor,currentHandle))
+
         );
 
 
