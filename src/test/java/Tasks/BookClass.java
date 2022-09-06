@@ -26,7 +26,7 @@ public class BookClass implements Task {
                 WaitUntil.the(LoginForm.SELECT_PROGRAM, isClickable()),
                 Click.on(LoginForm.SELECT_PROGRAM),
                 Click.on(LoginForm.BEGIN),
-                WaitUntil.the(FRAME_2,isClickable()),
+                WaitUntil.the(FRAME_2,isVisible()),
                 SwitchFrame.switchToFrame(FRAME_2),
                 WaitUntil.the(LoginForm.DROPDOWN_LIST,isClickable()),
                 Click.on(LoginForm.DROPDOWN_LIST),

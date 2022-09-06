@@ -27,7 +27,7 @@ targetCompatibility = 1.8
 ext {
     slf4jVersion = '1.7.7'
     serenityCoreVersion = '2.2.13'
-    serenityCucumberVersion = '2.2.5'
+    serenityCucumberVersion = '2.2.6'
     junitVersion = '4.12'
     assertJVersion = '3.8.0'
     logbackVersion = '1.2.3'
@@ -35,6 +35,8 @@ ext {
 
 dependencies {
     compile "ch.qos.logback:logback-classic:${logbackVersion}"
+
+//    implementation "net.serenity-bdd:serenity-cucumber:${serenityCucumberVersion}"
 
     testCompile "net.serenity-bdd:serenity-core:${serenityCoreVersion}",
             "net.serenity-bdd:serenity-cucumber5:${serenityCucumberVersion}",
@@ -47,6 +49,16 @@ dependencies {
 test {
     testLogging.showStandardStreams = true
     systemProperties System.getProperties()
+}
+jar {
+    from {
+        // Package all dependencies in the .jar
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    manifest {
+        // Indicate the main class for the .jar file
+        attributes 'Main-Class': 'CukesRunner'
+    }
 }
 
 gradle.startParameter.continueOnFailure = true
