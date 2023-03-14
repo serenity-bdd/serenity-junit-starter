@@ -10,6 +10,6 @@ import net.thucydides.core.annotations.Step;
 public class NavigateActions extends UIInteractions {
     @Step("Navigate to the home page")
     public void toTheHomePage() {
-        openUrl("http://wikipedia.com/");
+        openUrl("https://wikipedia.com/");
     }
 }
