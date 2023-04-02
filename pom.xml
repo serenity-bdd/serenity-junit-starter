@@ -108,7 +108,10 @@
                 <configuration>
                     <source>16</source>
                     <target>16</target>
-                </configuration>
+                    <compilerArgs>
+                        <arg>-parameters</arg>
+                    </compilerArgs>
+                 </configuration>
             </plugin>
             <plugin>
                 <groupId>net.serenity-bdd.maven.plugins</groupId>
