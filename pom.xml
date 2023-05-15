@@ -31,6 +31,18 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+            <groupId>net.serenity-bdd</groupId>
+            <artifactId>serenity-screenplay</artifactId>
+            <version>${serenity.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.serenity-bdd</groupId>
+            <artifactId>serenity-screenplay-webdriver</artifactId>
+            <version>${serenity.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>1.2.11</version>
@@ -96,7 +108,10 @@
                 <configuration>
                     <source>16</source>
                     <target>16</target>
-                </configuration>
+                    <compilerArgs>
+                        <arg>-parameters</arg>
+                    </compilerArgs>
+                 </configuration>
             </plugin>
             <plugin>
                 <groupId>net.serenity-bdd.maven.plugins</groupId>
