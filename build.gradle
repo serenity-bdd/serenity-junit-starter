@@ -1,5 +1,5 @@
 plugins {
-    id "net.serenity-bdd.serenity-gradle-plugin" version "3.4.2"
+    id "net.serenity-bdd.serenity-gradle-plugin" version "3.9.4"
     id 'java'
 }
 
@@ -14,7 +14,7 @@ targetCompatibility = 1.8
 
 ext {
     slf4jVersion = '1.7.7'
-    serenityCoreVersion = '3.6.12'
+    serenityCoreVersion = '3.9.4'
     junitVersion = '5.9.2'
     assertJVersion = '3.23.1'
     lombokVersion = '1.18.24'
@@ -26,6 +26,7 @@ dependencies {
             "net.serenity-bdd:serenity-junit5:${serenityCoreVersion}",
             "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}",
             "net.serenity-bdd:serenity-screenplay-webdriver:${serenityCoreVersion}",
+            "net.serenity-bdd:serenity-ensure:${serenityCoreVersion}",
             "org.junit.jupiter:junit-jupiter-api:${junitVersion}",
             "org.junit.jupiter:junit-jupiter-engine:${junitVersion}",
             "org.assertj:assertj-core:${assertJVersion}",
