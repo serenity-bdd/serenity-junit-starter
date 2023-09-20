@@ -25,4 +25,4 @@ jobs:
         npx @puppeteer/browsers install chrome@stable
         
     - name: Build with Gradle
-      run: gradle clean test
+      run: gradle clean test -Dheadless.mode=true
