@@ -18,5 +18,11 @@ jobs:
       with:
         distribution: 'zulu'
         java-version: '17'
+
+    - name: Install Chrome for Testing and its driver
+      run: |
+        npm i puppeteer
+        npx @puppeteer/browsers install chrome@stable
+        
     - name: Build with Gradle
       run: gradle clean test
