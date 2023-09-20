@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="starter.acceptancetests.WhenSearchingForTerms" skipped="0" tests="1" time="2.75" timestamp="2023-09-20 10:00:27"><testcase classname="starter.acceptancetests.WhenSearchingForTerms" name="Should be able to search for green things"/></testsuite>
