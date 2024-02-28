@@ -10,7 +10,7 @@
     <name>Sample Serenity BDD project using JUnit 5</name>
 
     <properties>
-        <serenity.version>4.0.46</serenity.version>
+        <serenity.version>4.1.3</serenity.version>
         <junit5.version>5.10.1</junit5.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <encoding>UTF-8</encoding>
