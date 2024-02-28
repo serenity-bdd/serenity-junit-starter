@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8"/>
-    <title>Should be able to search for green things</title>
+    <title>1 Should be able to search for {1} things</title>
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
@@ -122,8 +122,8 @@
             <a href="index.html" class="breadcrumbs">Home</a>
 
  <!-- inflection.of(breadcrumb.displayName).asATitle()-->
-            > <a href="97fabecd9fb00ce57129e9467755fd9d2cba6770be755f0f303258b999a52839.html">When searching for terms</a>
-        > Should be able to search for green things
+            > <a href="4fb9fcc7f9c1569e77a22954dd2c1f2c4bba60b3379a851e42cd6f2725867582.html">When searching for terms parameterized</a>
+        > 1 should be able to search for {1} things
         </span>
         </div>
         <div class="rightbg"></div>
@@ -147,7 +147,7 @@
             <a href="2a4631d87648e59c428d4cf0e9247f9d286e4679f436ca2ce872e931eb4dfd58.html"><i class="bi bi-chat-text"></i> Stories</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 28-02-2024 06:37</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 28-02-2024 06:38</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -162,7 +162,7 @@
                                 <div>
                                     <h3 class="discreet-story-header">
                                         <i class="fs-2 bi bi-chat-left-quote title-icon"></i>
-                                        <span class="story-header-title">When Searching For Terms </span>
+                                        <span class="story-header-title">When Searching For Terms Parameterized </span>
                                     </h3>
 
                                 </div>
@@ -173,7 +173,7 @@
                                     <span class="badge example-tag tag-badge" style="background:default;">
                                     <i class="bi bi-tag-fill"></i>&nbsp;
                                         <a class="tagLink" style="background:default;"
-                                           href="34658a1663fcf042bd7acb3325affbe4e647c8acd84d0228be2f52e1381e61b9.html">10 To 30 Seconds
+                                           href="6c5512236937b92cd7a296b24edb966c2bd94be46b8910f8b129a42d6150eb25.html">1 To 10 Seconds
                                               (Duration)
                                         </a>
                                 </span>
@@ -190,7 +190,7 @@
                             <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
                             <span class="test-case-title">
                                 <span class="success-color">
-                                    Should be able to search for green things
+                                    1 Should be able to search for {1} things
                                         <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -202,57 +202,53 @@
             </div>
 
 
-            <!-- CAST MEMBERS -->
-            <div>&nbsp;</div>
-            <div>
-                <h3 class="discreet-story-header">
-                    <i class="fs-2 bi bi-people large-icon"></i>
-                    <span class="story-header-title">
-                        <a class="btn btn-primary" data-toggle="collapse" href="#castDetails"
-                           role="button" aria-expanded="true" aria-controls="castDetails">Cast</a>
-                    </span>
-                </h3>
-            </div>
-            <div class="collapse multi-collapse" id="castDetails">
-                <table class="cast">
-                    <tr>
-                            <td width="100%">
-                                <h4>
-                                    <i class="fs-2 bi bi-person"></i>&nbsp;
-                                    <span>
-                                        <a data-toggle="collapse" href="#abilities-Actor"
-                                           aria-expanded="false" aria-controls="abilities">Actor</a>
-                                        
-                                    </span>
-                                </h4>
-                                <div class="collapse multi-collapse" id="abilities-Actor">
-                                        <div>
-                                            <span class="cast-description">Actor can:</span>
-                                            <ul>
-                                                    <li>browse the web</li>
-                                            </ul>
-                                        </div>
-                                </div>
-                            </td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-        </td>
-        </tr>
-        </table>
-    </div>
-    <!-- END CAST MEMBERS -->
-
 
 </div>
 </div>
 
 <div class="clr"></div>
 
+    <div class="story-title">
+        <h3 class="story-header">Scenario Outline</h3>
+
+        <div class="scenario">Actor opens the DuckDuckGo home page<br>Actor searches for '&lt;thing&gt;'<br>Actor should see the title of the page that contains (ignoring case): &lt;[&lt;thing&gt;]&gt;</div>
+
+    </div>
 
 <div id="beforetable"></div>
 
+
+        <h3 class="story-header">Examples:&nbsp;</h3>
+            <div class="requirementNarrative"></div>
+
+
+            <p class="example-tag">
+            </p>
+
+        <div class="example-table test-report">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>#</th>
+                        <th>Thing</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="test-SUCCESS"><a href="#0">1</a></td>
+                            <td class="test-SUCCESS"><a
+                                        href="#0">green</a>
+                            </td>
+                    </tr>
+                    <tr>
+                        <td class="test-SUCCESS"><a href="#1">2</a></td>
+                            <td class="test-SUCCESS"><a
+                                        href="#1">red</a>
+                            </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
 <div id="tablecontents">
     <div>
@@ -287,7 +283,7 @@
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
                                style="display:block;">
                                 <span class="top-level-step">
-                                                Actor opens the DuckDuckGo home page
+                                                1 Should be able to search for {1} things
                                         </span>
                             </a>
                             <span class="evidence">
@@ -296,7 +292,7 @@
                     </td>
 
                     <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">15s 173ms</span></td>
+                    <td width="100"><span class="top-level-step">1s 549ms</span></td>
                 </tr>
                     <tr>
                         <td colspan="5">
@@ -305,7 +301,37 @@
 
                     <td width="70" class="step-icon">
                         <a name="0-0"></a>
-                            <span style="margin-left: 40px;"
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-0')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection0-0 success-icon"
+                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-0')"
+                               style="display:block;">
+                                <span class="nested-step">
+                                                Actor opens the DuckDuckGo home page
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">570ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection0-0" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="90" class="step-icon">
+                        <a name="0-0-0"></a>
+                            <span style="margin-left: 60px;"
                                   class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
                                 </span>
                     </td>
@@ -321,7 +347,7 @@
                     </td>
 
                     <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">15s 147ms</span></td>
+                    <td width="100"><span class="nested-group-step">566ms</span></td>
                 </tr>
 
                             </table>
@@ -329,20 +355,20 @@
                     </tr>
                 <tr class="test-SUCCESS">
 
-                    <td width="50" class="step-icon">
-                        <a name="1"></a>
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1')"
+                    <td width="70" class="step-icon">
+                        <a name="0-1"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-1')"
                                style="display:block">
-                                <i class="bi bi-caret-right-square imgstepSection1 success-icon"
-                                   style="margin-left: 20px; float:left; padding-right:5px"></i>
+                                <i class="bi bi-caret-right-square imgstepSection0-1 success-icon"
+                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
                             </a>
                     </td>
 
                     <td class="step-description-column">
                         <div class="step-description">
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1')"
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-1')"
                                style="display:block;">
-                                <span class="top-level-step">
+                                <span class="nested-step">
                                                 Actor searches for 'green'
                                         </span>
                             </a>
@@ -351,17 +377,17 @@
                         </div>
                     </td>
 
-                    <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">469ms</span></td>
+                    <td width="130"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">252ms</span></td>
                 </tr>
                     <tr>
                         <td colspan="5">
-                            <table id="stepSection1" class="step-table-nested" style="display:none;">
+                            <table id="stepSection0-1" class="step-table-nested" style="display:none;">
                 <tr class="test-SUCCESS">
 
-                    <td width="70" class="step-icon">
-                        <a name="1-0"></a>
-                            <span style="margin-left: 40px;"
+                    <td width="90" class="step-icon">
+                        <a name="0-1-0"></a>
+                            <span style="margin-left: 60px;"
                                   class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
                                 </span>
                     </td>
@@ -377,7 +403,7 @@
                     </td>
 
                     <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">463ms</span></td>
+                    <td width="100"><span class="nested-group-step">245ms</span></td>
                 </tr>
 
                             </table>
@@ -385,16 +411,16 @@
                     </tr>
                 <tr class="test-SUCCESS">
 
-                    <td width="50" class="step-icon">
-                        <a name="2"></a>
-                            <span style="margin-left: 20px;"
-                                  class="top-level-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                    <td width="70" class="step-icon">
+                        <a name="0-2"></a>
+                            <span style="margin-left: 40px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
                                 </span>
                     </td>
 
                     <td class="step-description-column">
                         <div class="step-description">
-                                <span class="top-level-step">
+                                <span class="nested-group-step">
                                                 Actor should see the title of the page that contains (ignoring case): &lt;[green]&gt;
                                         </span>
                             <span class="evidence">
@@ -402,13 +428,17 @@
                         </div>
                     </td>
 
-                    <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">783ms</span></td>
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">727ms</span></td>
                 </tr>
+
+                            </table>
+                        </td>
+                    </tr>
             <tr class="test-SUCCESS">
                     <td colspan="2"></td>
                 <td width="130"><span class="top-level-step"><em>SUCCESS</em></span></td>
-                <td width="100"><span class="top-level-step"><em>15.44s</em></span></td>
+                <td width="100"><span class="top-level-step"><em>1.55s</em></span></td>
             </tr>
 
         </table>
