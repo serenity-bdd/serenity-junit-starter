@@ -115,7 +115,11 @@
                     search: ""
                 },
                 columnDefs: [
-                    {type: 'time-elapsed-dhms', targets: 5}
+                    {
+                        targets: 4,
+                        visible: false
+                    },
+                    {type: 'time-elapsed-dhms', targets: 6}
                 ]
             })
             $("#manual-scenario-results").DataTable({
@@ -124,6 +128,12 @@
                     searchPlaceholder: "Filter",
                     search: ""
                 },
+                columnDefs: [
+                    {
+                        targets: 4,
+                        visible: false
+                    },
+                ]
             })
 
             // Results table
@@ -142,7 +152,17 @@
             $(".feature-coverage-table").DataTable({
                 searching: true,
                 paging: false,
-                info: false
+                info: false,
+                language: {
+                    searchPlaceholder: "Filter",
+                    search: ""
+                },
+                columnDefs: [
+                    {
+                        targets: 2,
+                        visible: false
+                    },
+                ]
             });
 
             $(".feature-coverage-table-with-pagination").DataTable({
@@ -152,7 +172,13 @@
                 language: {
                     searchPlaceholder: "Filter",
                     search: ""
-                }
+                },
+                columnDefs: [
+                    {
+                        targets: 2,
+                        visible: false
+                    },
+                ]
             });
         });
     </script>
@@ -203,7 +229,7 @@
             <a href="2a4631d87648e59c428d4cf0e9247f9d286e4679f436ca2ce872e931eb4dfd58.html"><i class="bi bi-chat-text"></i> Stories</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 12-05-2024 16:30:18</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 12-05-2024 16:30:21</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -303,21 +329,21 @@
                     <td>
                         <i class="bi bi-flag-fill"></i> Tests Started
                     </td>
-                    <td>May 12, 2024 16:30:11</td>
+                    <td>May 12, 2024 16:30:15</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-stop-circle"></i> Tests
                         Finished
                     </td>
-                    <td>May 12, 2024 16:30:19</td>
+                    <td>May 12, 2024 16:30:22</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-stopwatch"></i> Total
                         Duration
                     </td>
-                    <td>7s</td>
+                    <td>6s</td>
                 </tr>
                 <tr scope="row">
                     <td>
@@ -330,21 +356,21 @@
                         <i class="bi bi-skip-start"></i> Slowest
                         Test
                     </td>
-                    <td>3s</td>
+                    <td>2s</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-stopwatch"></i> Average
                         Execution Time
                     </td>
-                    <td>2s</td>
+                    <td>1s</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-stopwatch-fill"></i> Total
                         Execution Time
                     </td>
-                    <td>7s</td>
+                    <td>6s</td>
                 </tr>
                 </tbody>
             </table>
@@ -361,12 +387,12 @@
 
                                                                     <h4>Features</h4>
 
-                                                                    <table class="table feature-coverage-table"
-                                                                           id="Feature">
+                                                                    <table class="table feature-coverage-table" id="Feature" style="width:100%">
                                                                         <thead>
                                                                         <tr>
                                                                             <th>Feature</th>
                                                                             <th style="width:1em;">Scenarios</th>
+                                                                            <th style="width:1em;">StepsText</th>
                                                                             <th style="width:1em;">Test&nbsp;Cases</th>
                                                                             <th style="width:1em;">%&nbsp;Pass</th>
                                                                             <th style="width:1em;">Result</th>
@@ -379,6 +405,17 @@
                                                                                             <a href="97fabecd9fb00ce57129e9467755fd9d2cba6770be755f0f303258b999a52839.html"> When searching for terms</a>
                                                                                     </td>
                                                                                     <td>2</td>
+                                                                                    <td>Actor opens the DuckDuckGo home page
+Actor opens the Duck duck go home page
+Actor searches for 'green'
+Actor enters 'green' then hits [ENTER] into search field
+Actor should see the title of the page that contains (ignoring case): <[green]>
+Actor opens the DuckDuckGo home page
+Actor opens the Duck duck go home page
+Actor searches for 'red'
+Actor enters 'red' then hits [ENTER] into search field
+Actor should see the title of the page that contains (ignoring case): <[red]>
+</td>
                                                                                     <td>2</td>
                                                                                     <td>100%</td>
                                                                                     <td>
@@ -441,7 +478,7 @@
                         <i class="bi bi-stopwatch"></i> Total
                         Duration
                     </td>
-                    <td>7s</td>
+                    <td>6s</td>
                 </tr>
                 <tr scope="row">
                     <td>
@@ -462,30 +499,30 @@
                         <i class="bi bi-skip-start"></i> Slowest
                         Test
                     </td>
-                    <td>3s</td>
+                    <td>2s</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-flag-fill"></i> Tests Started
                     </td>
-                    <td>May 12, 2024 16:30:11</td>
+                    <td>May 12, 2024 16:30:15</td>
                     <td>
                         <i class="bi bi-stopwatch"></i> Average
                         Execution Time
                     </td>
-                    <td>2s</td>
+                    <td>1s</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-stop-circle"></i> Tests
                         Finished
                     </td>
-                    <td>May 12, 2024 16:30:19</td>
+                    <td>May 12, 2024 16:30:22</td>
                     <td>
                         <i class="bi bi-stopwatch-fill"></i> Total
                         Execution Time
                     </td>
-                    <td>7s</td>
+                    <td>6s</td>
                 </tr>
                 </tbody>
             </table>
@@ -494,14 +531,14 @@
 
                                                         <h3><i class="bi bi-gear"></i> Automated Scenarios</h3>
 
-                                                            <table class="scenario-result-table table"
-                                                                   id="scenario-results">
+                                                            <table class="scenario-result-table table" id="scenario-results" style="width:100%">
                                                                 <thead>
                                                                 <tr>
                                                                     <th>story</th>
                                                                     <th class="test-name-column">Scenario</th>
                                                                     <th>Context</th>
                                                                     <th>Steps</th>
+                                                                    <th>StepsText</th>
                                                                     <th>Started</th>
                                                                     <th>Total Duration</th>
                                                                     <th>Result</th>
@@ -518,8 +555,12 @@
                                                                         <td><span class='context-icon'><i class='bi bi-browser-chrome' title='Chrome'></i> <i class='bi bi-ubuntu' title='Linux'></i></span><span style="display:none">Chrome,linux</span>
                                                                         </td>
                                                                         <td>3</td>
-                                                                        <td data-order="1715531411">16:30:11</td>
-                                                                        <td>1s 778ms</td>
+                                                                        <td>Actor opens the DuckDuckGo home page
+Actor searches for 'green'
+Actor should see the title of the page that contains (ignoring case): <[green]>
+</td>
+                                                                        <td data-order="1715531415">16:30:15</td>
+                                                                        <td>1s 579ms</td>
                                                                         <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
                                                                                     style="display:none">SUCCESS</span>
                                                                         </td>
@@ -534,8 +575,12 @@
                                                                         <td><span class='context-icon'><i class='bi bi-browser-chrome' title='Chrome'></i> <i class='bi bi-ubuntu' title='Linux'></i></span><span style="display:none">Chrome,linux</span>
                                                                         </td>
                                                                         <td>3</td>
-                                                                        <td data-order="1715531413">16:30:13</td>
-                                                                        <td>2s 108ms</td>
+                                                                        <td>Actor opens the DuckDuckGo home page
+Actor searches for 'red'
+Actor should see the title of the page that contains (ignoring case): <[red]>
+</td>
+                                                                        <td data-order="1715531417">16:30:17</td>
+                                                                        <td>1s 643ms</td>
                                                                         <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
                                                                                     style="display:none">SUCCESS</span>
                                                                         </td>
@@ -555,8 +600,12 @@
                                                                         <td><span class='context-icon'><i class='bi bi-browser-chrome' title='Chrome'></i> <i class='bi bi-ubuntu' title='Linux'></i></span><span style="display:none">Chrome,linux</span>
                                                                         </td>
                                                                         <td>3</td>
-                                                                        <td data-order="1715531416">16:30:15</td>
-                                                                        <td>3s 165ms</td>
+                                                                        <td>Actor opens the DuckDuckGo home page
+Actor searches for '<thing>'
+Actor should see the title of the page that contains (ignoring case): <[<thing>]>
+</td>
+                                                                        <td data-order="1715531419">16:30:19</td>
+                                                                        <td>2s 810ms</td>
                                                                         <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
                                                                                     style="display:none">SUCCESS</span>
                                                                         </td>
@@ -612,7 +661,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-12">
-            <span class="version">Serenity BDD version 4.1.6</span>
+            <span class="version">Serenity BDD version 4.1.12</span>
         </div>
     </div>
 </div>
