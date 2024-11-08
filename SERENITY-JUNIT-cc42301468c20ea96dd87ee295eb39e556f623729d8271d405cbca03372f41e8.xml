@@ -1,1 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="starter.acceptancetests.WhenSearchingForTermsParameterized" skipped="0" tests="2" time="3.67" timestamp="2024-11-08 10:30:53"><testcase classname="starter.acceptancetests.WhenSearchingForTermsParameterized" name="searchFor(String)"/></testsuite>
